@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahjong Game with Leaderboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Instructions Section -->
+  <div id="instructions-section">
+    <h2>Game Instructions</h2>
+    <p><strong>General Rules:</strong></p>
+    <ul>
+      <li>The game consists of 14 tiles displayed in a single row.</li>
+      <li>The tiles are divided into 5 groups (4 groups of 3 tiles and 1 group of 2 tiles).</li>
+      <li>
+        Scoring Patterns:
+        <ul>
+          <li><strong>Kezi:</strong> 3 identical tiles (points x 2).</li>
+          <li><strong>Shunzi:</strong> 3 consecutive tiles of the same type (points x 2).</li>
+          <li><strong>Duizi:</strong> 2 identical tiles in the last group (points x 2).</li>
+          <li><strong>Hu:</strong> Achieved when all 4 groups are Kezi/Shunzi, and the last group is Duizi (total score doubled).</li>
+        </ul>
+      </li>
+      <li>You can click on any tile to replace it with a random tile from the pool.</li>
+      <li>The game ends when the timer reaches 0.</li>
+      <li><a href="https://atom-expensive-starfish.glitch.me/">Want more Mahjong? Heading to our newest Mahjong + Autochess game.</a></li>
+    </ul>
+  </div>
+  
+  <!-- Main Game Section -->
+  <div id="game-container">
+    <h1>Mahjong Game</h1>
+    <div id="controls">
+      <button id="play-btn">Start Game</button>
+      <button id="leaderboard-btn">Leaderboard</button>
+    </div>
+    <div id="timer">Time Left: 180</div>
+    <div id="score-counter">Score: 0</div> <!-- Score Counter -->
+    <div id="score-message" style="display: none;">Game messages will appear here.</div> <!-- Score Message -->
+    <div id="game-board"></div>
+  </div>
+
+  <!-- Score Submission Form -->
+  <div id="submit-score-form">
+    <h2>Submit Your Score</h2>
+    <input type="text" id="player-name" placeholder="Your Name" required />
+    <button id="submit-score-btn">Submit</button>
+  </div>
+
+  <!-- Leaderboard -->
+  <div id="leaderboard" style="display: none;">
+    <h2>Leaderboard</h2>
+    <ul id="leaderboard-list"></ul>
+  </div>
+  
+
+  <!-- External Libraries and Script -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
+
+
